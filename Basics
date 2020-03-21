@@ -1,0 +1,23 @@
+#OpenCV using pycharm
+
+import cv2
+print('cv2 installed')
+
+#black and white image / grey scale = 0
+#color = 1
+
+#read file
+img = cv2.imread('location and name of file', 0)
+
+#resize image math is used to keep symetry 
+resized_image = cv2.resize( img, (int(img.shape[1]/2),int(img.shape[0]/2)))
+
+#image show
+cv2.imshow('Photo', resized_image)
+
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+print(type(img))
+print(img.shape)
